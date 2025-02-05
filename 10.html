@@ -1,0 +1,26 @@
+<script>
+//Problema: Fibonacci
+    /*
+    Pergunte ao usuário quantos números da sequência de Fibonacci deseja obter, usando a estrutura de repetição while.
+    */
+
+    //ENTRADA
+    let numeros = Number (prompt(`Informe quantos números da sequência Fibonacci deseja obter:`));
+    let a = 0;
+    let b = 0;
+    let contador = 0;
+    let sequencia = [];
+
+    //PROCESSAMENTO
+    while (contador < numeros){
+        sequencia.push(a);
+        let variavel = a;
+        a = b;
+        b = temp + b;
+        contador++;
+    }
+
+    //SAÍDA
+
+    alert(`A sequência de: ${numeros} números é: ${sequencia.join(", ")}`);
+</script>

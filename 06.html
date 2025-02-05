@@ -1,0 +1,74 @@
+<script>
+    /*
+    PROBLEMA: URNA ELETRÔNICA
+    Faça um programa que simule a urna eletrônica.
+    A tela a ser apresentada deverá ser da seguinte forma:
+    As opções são:
+    1. Candidato Joãozinho
+    2. Candidato Mariazinha
+    3. Nulo
+    4. Branco
+    Entre com o seu voto:
+
+    O programa deverá ler os votos dos eleitores e, quando for entrado o número 0, apresentar as seguintes
+    informações:
+    a) O número de votos de cada candidato;
+    b) A porcentagem de votos nulos;
+    c) A porcentagem de votos brancos;
+    d) O candidato vencedor.
+    */
+
+    //ENTRADA
+    let joazinho = 0;
+    let mariazinha = 0;
+    let nulo = 0;
+    let branco = 0;
+    let total = 0;
+
+    //PROCESSAMENTO
+    let voto = -1;
+
+    while (voto !== 0) {
+        voto = Number (prompt(`As opções são: \n 1. Candidato Joãozinho \n 2. Candidata Mariazinha \n 3. Nulo \n 4. Branco \n \n Para acabar a votação, digite 0.`));
+        
+        if (voto === 1) {
+            joazoinho++
+            total++
+        
+        } else if (voto === 2) {
+            mariazinha++
+            total++
+        
+        } else if (voto === 3) {
+            nulo++
+            total++
+        
+        } else if (voto === 4) {
+            branco+
+            total++
+        
+        } else if (voto !== 0) {
+            alert(`Voto inválido!! Tente de novo`);
+        }
+    }
+        
+        let porcbranco = 0;
+        let porcnulo = 0;
+        
+            if (total > 0) {
+                porcbranco = (nulo / totalVotos) * 100;
+                porcnulo = (branco / totalVotos) * 100;
+    }
+        let ganhador = "Empate"
+            if (joazinho > mariazinha) {
+                vencedor = "Joãozinho";
+    } 
+            else if (mariazinha > joaozinho) {
+                vencedor = "Mariazinha";
+    }
+        
+        
+    //SAÍDA
+
+    alert(`Resultados: \nVotos do Candidato Joãozinho: ${votosJoaozinho} \nVotos da Candidata Mariazinha: ${votosMariazinha} \nVotos Nulos: ${votosNulos} \nVotos Brancos: ${votosBrancos} \nPorcentagem de votos nulos: ${porcentNulos.toFixed(2)}% \nPorcentagem de votos brancos: ${porcentBrancos.toFixed(2)}% \n \n VENCEDOR(A): ${vencedor}`);
+</script>

@@ -1,0 +1,59 @@
+<script>
+     /*
+    PROBLEMA: PESQUISA DE IDADE
+    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+
+    a) A média dos salários do grupo;
+    b) A maior e a menor idade do grupo;
+    c) A quantidade de mulheres na região;
+    d) A idade e o sexo da pessoa que possui o menor salário;
+
+    Finalize a entrada de dados ao ser digitada uma idade negativa.
+    */
+
+    //ENTRADA
+    
+    let maiorI = 0;
+    let menorI = 0;
+    let somaS = 0;
+    let idadeMenorSalario = 0;
+    let sexoMenorSalario = 0;
+    let qntdMulheres = 0;
+    let totalP = 0;
+    let menorSalario = 0;
+
+    //PROCESSAMENTO
+    let idade = Number (prompt(`Informe a idade: \nPara encerrar digite uma idade negativa.`));
+    
+    while (idade > 0) {
+        let sexo = prompt(`Informe o sexo: \nFeminino (F) \nMasculino (M).`).toUpperCase();
+        let salario = Number (prompt(`Informe o salário:`));
+
+        somaS += salario;
+        totalP++
+
+        if (totalP === 1 || idade > maiorI ) {
+            maiorI = idade;   
+        }
+        if (totalP === 1 || idade < menorI) {
+            menorI = idade;
+        }
+
+        if (sexo === "F") {
+            qntdMulheres++
+        }
+
+        if (totalP === 1 || salario < menorSalario) {
+            idadeMenorSalario = idade;
+            sexoMenorSalario = sexo;
+            menorSalario = salario;
+        }
+        idade = Number(prompt(`Digite a idade: \nDigite uma idade negativa para encerrar.`));
+    }
+    
+    let mediaSalarios = somaS / totalP;
+
+    //SAÍDA
+
+    alert(`A média dos salários do grupo foi: R$ ${mediaSalarios.toFixed(2)} \nA maior idade: ${maiorI} \nMenor idade ${menorI} \nExiste ${qntdMulheres} na região \nA idade da pessoa com menor salário é: ${idadeMenorSalario} \nO sexo da pessoa com menor salário: ${sexoMenorSalario}`);
+</script>
